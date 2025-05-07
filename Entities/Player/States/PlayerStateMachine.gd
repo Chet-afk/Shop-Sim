@@ -9,7 +9,6 @@ func _input(input: InputEvent) -> void:
 		self.move_to_state(potentialState)
 
 func _process(delta: float) -> void:
-	print(curState.name)
 	var potentialState = curState._handle_frame(delta)
 	
 	# Non null state means to change state
