@@ -12,3 +12,6 @@ func startup() -> void:
 	
 func _handle_frame(delta: float) -> GeneralState:
 	return null
+
+func _handle_physics_frame(delta: float) -> GeneralState:
+	return null

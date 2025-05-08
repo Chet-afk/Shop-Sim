@@ -1,15 +1,16 @@
 extends PlayerState
 
-func _handle_frame(delta: float) -> PlayerState:
-	
-	var inputVector = Input.get_vector("Left","Right","Up","Down")
-	
-	parent.velocity = inputVector * parent.speed
-	parent.move_and_slide()
+func _handle_physics_frame(delta: float) -> PlayerState:
 	
 	if not Input.is_anything_pressed():
 		return get_node("../Idle")
 	
-	# Has to be here or else it will reset to 0 when no inputs are recognized
-	parent.get_node("InteractArea").set_rotation(inputVector.angle())
+	# Without this, inputs while not moving will reset the interaction zone
+	if (Input.is_action_pressed("Down") or Input.is_action_pressed("Up") or
+	Input.is_action_pressed("Left") or Input.is_action_pressed("Right")):
+		var inputVector = Input.get_vector("Left","Right","Up","Down")
+		
+		parent.velocity = inputVector * parent.speed
+		parent.move_and_slide()
+		parent.interactArea.set_rotation(inputVector.angle())
 	return null
