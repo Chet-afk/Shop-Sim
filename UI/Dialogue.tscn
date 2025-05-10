@@ -10,6 +10,7 @@ anchor_bottom = 1.0
 offset_left = 87.0
 offset_right = -87.0
 offset_bottom = -20.0
+focus_mode = 2
 script = ExtResource("1_21og4")
 
 [node name="ReferenceRect" type="ReferenceRect" parent="."]

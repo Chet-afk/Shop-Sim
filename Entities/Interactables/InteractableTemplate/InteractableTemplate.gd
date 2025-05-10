@@ -11,4 +11,4 @@ func _ready() -> void:
 	text.append("OVERRIDE READY FUNCTION")
 
 func display_text():
-	UiSignals.display_text.emit(text)
+	UiSignals.give_text.emit(text)

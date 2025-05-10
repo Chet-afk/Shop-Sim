@@ -15,7 +15,7 @@ func setup(parent) -> void:
 	curState = initState
 
 
-func move_to_state(new_state) -> void:
+func move_to_state(new_state: GeneralState) -> void:
 	# Simple check, ensure current state exists before calling cleanup
 	if curState:
 		curState.cleanup()

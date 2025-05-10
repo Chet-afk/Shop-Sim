@@ -1,3 +1,5 @@
 extends Node
 
-signal display_text
+# Holds signals and acts as a connection to the UI
+signal give_text
+signal set_player_idle

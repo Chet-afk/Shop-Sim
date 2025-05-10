@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Shop-Sim"
-run/main_scene="uid://x4bnkculn6ev"
+run/main_scene="uid://djrky7pa5ayse"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://Assets/icon.svg"
 

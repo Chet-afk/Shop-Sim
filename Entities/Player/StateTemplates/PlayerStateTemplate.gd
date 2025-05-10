@@ -28,6 +28,7 @@ func _handle_input(input: InputEvent) -> PlayerState:
 				shortest_distance = \
 				self.position.distance_to(each_interactable.position)
 		closest_node.display_text()
+		return get_node("../Interacting")
 	
 	return null
 
