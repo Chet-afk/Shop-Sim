@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://djrky7pa5ayse"]
+
+[ext_resource type="PackedScene" uid="uid://cgyv13vfciq3w" path="res://Maps/TestScene.tscn" id="1_uu6xs"]
+[ext_resource type="PackedScene" uid="uid://rs1oipkknia0" path="res://UI/Dialogue.tscn" id="2_r0du0"]
+[ext_resource type="PackedScene" uid="uid://x4bnkculn6ev" path="res://Entities/Player/Player.tscn" id="3_r0du0"]
+
+[node name="Main" type="Node"]
+
+[node name="Player" parent="." instance=ExtResource("3_r0du0")]
+position = Vector2(488, 176)
+
+[node name="TestScene" parent="." instance=ExtResource("1_uu6xs")]
+
+[node name="Dialogue" parent="." instance=ExtResource("2_r0du0")]

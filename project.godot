@@ -15,6 +15,10 @@ run/main_scene="uid://x4bnkculn6ev"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://Assets/icon.svg"
 
+[autoload]
+
+UiSignals="*res://Globals/UISignals.gd"
+
 [input]
 
 Left={
