@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dt60adhb3ra1j"]
+[gd_scene load_steps=5 format=3 uid="uid://l3xi3rsy2fin"]
 
-[ext_resource type="Texture2D" uid="uid://dw6us4ywqngf" path="res://Assets/icon.svg" id="1_iexjv"]
+[ext_resource type="Texture2D" uid="uid://dw6us4ywqngf" path="res://Assets/icon.svg" id="1_55un5"]
+[ext_resource type="Script" uid="uid://c8sf7q5fp0j8k" path="res://Entities/Interactables/Items/TestItem2.gd" id="2_nyclh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0rim8"]
 size = Vector2(64, 64)
@@ -12,12 +13,13 @@ size = Vector2(64, 64)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_iexjv")
+texture = ExtResource("1_55un5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_0rim8")
 
 [node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("2_nyclh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_iexjv")

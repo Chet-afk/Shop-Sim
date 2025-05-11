@@ -15,7 +15,7 @@ func _ready() -> void:
 func hold_text(obtainedText: Array[String]):
 	self.grab_focus()
 	self.visible = true
-	text = obtainedText
+	text = obtainedText.duplicate(true)
 	textLen = text.size()
 	display_text()
 	

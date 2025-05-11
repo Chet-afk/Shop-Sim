@@ -1,11 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://cgyv13vfciq3w"]
+[gd_scene load_steps=3 format=3 uid="uid://cgyv13vfciq3w"]
 
-[ext_resource type="PackedScene" uid="uid://dt60adhb3ra1j" path="res://Entities/Interactables/InteractableTemplate/InteractableTemplate.tscn" id="2_yx5uc"]
+[ext_resource type="PackedScene" uid="uid://l3xi3rsy2fin" path="res://Entities/Interactables/Items/TestItem2.tscn" id="1_yx5uc"]
+[ext_resource type="PackedScene" uid="uid://84et2ilc0x0m" path="res://Entities/Interactables/Items/TestItem.tscn" id="2_pjsss"]
 
 [node name="TestScene" type="Node2D"]
 
-[node name="TestItem" parent="." instance=ExtResource("2_yx5uc")]
-position = Vector2(352, 104)
+[node name="GeneralInteractable" parent="." instance=ExtResource("1_yx5uc")]
+position = Vector2(536, 120)
 
-[node name="GeneralInteractable" parent="." instance=ExtResource("2_yx5uc")]
-position = Vector2(480, 104)
+[node name="GeneralInteractable2" parent="." instance=ExtResource("2_pjsss")]
+position = Vector2(320, 144)
