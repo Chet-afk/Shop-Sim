@@ -1,14 +1,30 @@
-[gd_scene load_steps=4 format=3 uid="uid://djrky7pa5ayse"]
+[gd_scene load_steps=5 format=3 uid="uid://djrky7pa5ayse"]
 
 [ext_resource type="PackedScene" uid="uid://cgyv13vfciq3w" path="res://Maps/TestScene.tscn" id="1_uu6xs"]
+[ext_resource type="Script" uid="uid://nr0ijiwh4a13" path="res://Entities/Player/PlayerCamera.gd" id="2_cm0pq"]
 [ext_resource type="PackedScene" uid="uid://rs1oipkknia0" path="res://UI/Dialogue.tscn" id="2_r0du0"]
 [ext_resource type="PackedScene" uid="uid://x4bnkculn6ev" path="res://Entities/Player/Player.tscn" id="3_r0du0"]
 
 [node name="Main" type="Node"]
 
 [node name="Player" parent="." instance=ExtResource("3_r0du0")]
-position = Vector2(488, 176)
+position = Vector2(320, 304)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+visible = false
+script = ExtResource("2_cm0pq")
 
 [node name="TestScene" parent="." instance=ExtResource("1_uu6xs")]
 
-[node name="Dialogue" parent="." instance=ExtResource("2_r0du0")]
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Dialogue" parent="UI" instance=ExtResource("2_r0du0")]
+anchors_preset = -1
+anchor_top = 0.548
+anchor_right = 1.004
+anchor_bottom = 1.0
+offset_left = 100.0
+offset_right = -107.68
+offset_bottom = -20.0
+size_flags_horizontal = 0
+size_flags_vertical = 0

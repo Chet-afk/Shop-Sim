@@ -1,8 +1,8 @@
 extends CharacterBody2D
 class_name Player
 
-@export var speed := 200
-
+@export var hSpeed := 1000
+@export var vSpeed := 300
 @onready var stateMachine := $StateMachine
 @onready var interactArea := $InteractArea
 

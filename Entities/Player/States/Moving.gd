@@ -9,8 +9,8 @@ func _handle_physics_frame(delta: float) -> PlayerState:
 	if (Input.is_action_pressed("Down") or Input.is_action_pressed("Up") or
 	Input.is_action_pressed("Left") or Input.is_action_pressed("Right")):
 		var inputVector = Input.get_vector("Left","Right","Up","Down")
-		
-		parent.velocity = inputVector * parent.speed
+		parent.velocity = Vector2(inputVector.x * parent.hSpeed, 
+			inputVector.y * parent.vSpeed)
 		parent.move_and_slide()
 		parent.interactArea.set_rotation(inputVector.angle())
 	return null
