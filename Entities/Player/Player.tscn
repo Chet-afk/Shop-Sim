@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://x4bnkculn6ev"]
+[gd_scene load_steps=10 format=3 uid="uid://x4bnkculn6ev"]
 
 [ext_resource type="Script" uid="uid://dshvwkdpa6fxo" path="res://Entities/Player/Player.gd" id="1_an6q6"]
 [ext_resource type="Texture2D" uid="uid://dw6us4ywqngf" path="res://Assets/icon.svg" id="2_vweq0"]
@@ -6,6 +6,27 @@
 [ext_resource type="Script" uid="uid://bqf8n3wirdxe" path="res://Entities/Player/States/Idle.gd" id="4_1des2"]
 [ext_resource type="Script" uid="uid://ht8l5ueu3i87" path="res://Entities/Player/States/Moving.gd" id="5_an6q6"]
 [ext_resource type="Script" uid="uid://d1q4e1pdj3pus" path="res://Entities/Player/States/Interacting.gd" id="6_t38ms"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_an6q6"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_vweq0")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"up",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_an6q6"]
 size = Vector2(51.5, 131)
@@ -16,8 +37,9 @@ size = Vector2(127.5, 131.5)
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_an6q6")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_vweq0")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_an6q6")
+animation = &"up"
 
 [node name="InteractArea" type="Area2D" parent="."]
 monitorable = false
