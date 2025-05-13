@@ -12,3 +12,6 @@ func _ready() -> void:
 	
 func set_idle():
 	stateMachine.move_to_state($StateMachine/Idle)
+
+func get_animation() -> String:
+	return $AnimatedSprite2D.animation

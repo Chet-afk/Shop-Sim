@@ -13,15 +13,16 @@ func setup(parent) -> void:
 	for state in get_children():
 		state.parent = parent
 	curState = initState
+	curState._startup()
 
 
 func move_to_state(new_state: GeneralState) -> void:
 	# Simple check, ensure current state exists before calling cleanup
 	if curState:
-		curState.cleanup()
+		curState._cleanup()
 		
 	curState = new_state
-	curState.startup()
+	curState._startup()
 
 
 	

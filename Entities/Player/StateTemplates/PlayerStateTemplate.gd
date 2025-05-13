@@ -1,7 +1,9 @@
 extends GeneralState
 class_name PlayerState
 
-@export var parent : Player
+var parent : Player
+var animSprite : AnimatedSprite2D
+
 
 func _handle_input(input: InputEvent) -> PlayerState:
 	# Things all player states need (generally)

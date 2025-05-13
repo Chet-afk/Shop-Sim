@@ -4,10 +4,10 @@ class_name GeneralState
 # Set the parent to whatever type the parent is most likely gonna be
 # @export var parent : Player
 
-func cleanup() -> void:
+func _cleanup() -> void:
 	return 
 
-func startup() -> void:
+func _startup() -> void:
 	return 
 	
 func _handle_frame(delta: float) -> GeneralState:

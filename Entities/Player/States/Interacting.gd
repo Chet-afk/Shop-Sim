@@ -8,10 +8,12 @@ extends PlayerState
 func _handle_input(input: InputEvent) -> PlayerState:
 	return null
 	
-func cleanup() -> void:
+func _cleanup() -> void:
 	return 
 
-func startup() -> void:
+func _startup() -> void:
+	parent.velocity = Vector2.ZERO
+	animSprite.pause()
 	return 
 
 func _handle_physics() -> PlayerState:

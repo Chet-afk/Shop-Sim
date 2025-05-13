@@ -1,7 +1,10 @@
 extends PlayerState
 
-func startup() -> void:
+func _startup() -> void:
 	parent.velocity = Vector2.ZERO
+	animSprite.set_animation("idle")
+	animSprite.play()
+	return 
 
 func _handle_input(input: InputEvent) -> PlayerState:
 	

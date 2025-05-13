@@ -1,28 +1,38 @@
-[gd_scene load_steps=10 format=3 uid="uid://x4bnkculn6ev"]
+[gd_scene load_steps=11 format=3 uid="uid://x4bnkculn6ev"]
 
 [ext_resource type="Script" uid="uid://dshvwkdpa6fxo" path="res://Entities/Player/Player.gd" id="1_an6q6"]
-[ext_resource type="Texture2D" uid="uid://dw6us4ywqngf" path="res://Assets/icon.svg" id="2_vweq0"]
+[ext_resource type="Texture2D" uid="uid://cm6tmj6ocjdui" path="res://Assets/dodge_the_creeps_2d_assets/art/playerGrey_walk1.png" id="2_hj1c0"]
 [ext_resource type="Script" uid="uid://c8jmrp6c5py3g" path="res://Entities/Player/States/PlayerStateMachine.gd" id="3_vweq0"]
+[ext_resource type="Texture2D" uid="uid://cdgdrw1wuwa1v" path="res://Assets/dodge_the_creeps_2d_assets/art/playerGrey_walk2.png" id="3_x44r4"]
 [ext_resource type="Script" uid="uid://bqf8n3wirdxe" path="res://Entities/Player/States/Idle.gd" id="4_1des2"]
 [ext_resource type="Script" uid="uid://ht8l5ueu3i87" path="res://Entities/Player/States/Moving.gd" id="5_an6q6"]
 [ext_resource type="Script" uid="uid://d1q4e1pdj3pus" path="res://Entities/Player/States/Interacting.gd" id="6_t38ms"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_an6q6"]
 animations = [{
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_hj1c0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_x44r4")
+}],
 "loop": true,
 "name": &"down",
-"speed": 5.0
+"speed": 3.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_vweq0")
+"texture": ExtResource("2_hj1c0")
 }],
-"loop": true,
+"loop": false,
 "name": &"idle",
-"speed": 5.0
+"speed": 2.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_x44r4")
+}],
 "loop": true,
 "name": &"up",
 "speed": 5.0
