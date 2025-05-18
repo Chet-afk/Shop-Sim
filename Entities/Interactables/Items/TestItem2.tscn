@@ -10,6 +10,7 @@ size = Vector2(64, 64)
 size = Vector2(64, 64)
 
 [node name="GeneralInteractable" type="StaticBody2D"]
+script = ExtResource("2_nyclh")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
@@ -19,7 +20,6 @@ texture = ExtResource("1_55un5")
 shape = SubResource("RectangleShape2D_0rim8")
 
 [node name="Area2D" type="Area2D" parent="."]
-script = ExtResource("2_nyclh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_iexjv")

@@ -6,7 +6,7 @@
 [node name="TestScene" type="Node2D"]
 
 [node name="GeneralInteractable" parent="." instance=ExtResource("1_yx5uc")]
-position = Vector2(536, 120)
+position = Vector2(1584, 576)
 
 [node name="GeneralInteractable2" parent="." instance=ExtResource("2_pjsss")]
-position = Vector2(320, 144)
+position = Vector2(1072, 568)

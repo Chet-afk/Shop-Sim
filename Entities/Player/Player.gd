@@ -6,6 +6,8 @@ class_name Player
 @onready var stateMachine := $StateMachine
 @onready var interactArea := $InteractArea
 
+var interactablesArray : Array[GeneralInteractable] = []
+
 func _ready() -> void:
 	stateMachine.setup(self)
 	UiSignals.set_player_idle.connect(set_idle)
@@ -15,3 +17,12 @@ func set_idle():
 
 func get_animation() -> String:
 	return $AnimatedSprite2D.animation
+
+
+func _on_interact_area_area_entered(area: Area2D) -> void:
+	if area.get_owner() is GeneralInteractable:
+		interactablesArray.append(area.get_owner())
+
+func _on_interact_area_area_exited(area: Area2D) -> void:
+	if area.get_owner() is GeneralInteractable:
+		interactablesArray.erase(area.get_owner())
